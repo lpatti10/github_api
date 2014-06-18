@@ -1,7 +1,7 @@
 //   https://api.github.com/users/lpatti10
 
 var ghAcct = {
-  {
+
     "login": "lpatti10",
     "id": 6626282,
     "avatar_url": "https://avatars.githubusercontent.com/u/6626282?",
@@ -32,5 +32,5 @@ var ghAcct = {
     "following": 4,
     "created_at": "2014-02-08T18:36:57Z",
     "updated_at": "2014-06-18T02:34:15Z"
-  }
+    
 }
