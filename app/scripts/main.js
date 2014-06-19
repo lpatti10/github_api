@@ -1,15 +1,24 @@
-		var repo, name, descr, update, lang, star, fork = '';
+	// SUCCESSFUL INJECTION OF REPOS (in alpha order) (timestamps need conversions)
+		var repo, icon, name, descr, update, lang, star, fork = '';
 			ghRepos.results.forEach (function (a) {
-				name = '<li><a>' + a.name + '</a>';
+				icon = '<li><span class="mega-octicon octicon-repo"></span>'
+				name = '<a class="repolist-name">' + a.name + '</a>';
 				descr = '<h4>' + a.description + '</h4>';
 				update = '<h6>' + a.updated_at + '</h6>';
 				lang = '<h5>' + a.language + '</h5>';
-				star = '<h5>' + a.stargazers_count + '</h5>';
-				fork = '<h5>' + a.forks_count + '</h5>';
-				repo = '<li>' + name + descr + update + lang + star + fork ;
+				star = '<h5><span class="octicon octicon-star">' + a.stargazers_count + '</h5>';
+				fork = '<h5><span class="octicon octicon-git-branch">' + a.forks_count + '</h5>';
+				repo = '<li>' + icon + name + descr + update + lang + star + fork;
 				repo += '</li>';
 				$('#repoList').append(repo);
 			});
+
+// Tim's example of _.each
+		var beer = ['lager', 'stout', 'amber', 'ipa', 'belgium'];
+		_.each(beer, function (a) {
+//		console.log(a);
+		});
+ 
 
 /*
 // ETSY SNIPPET ////////////////////////////////////////////////////////////////////////////

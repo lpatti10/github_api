@@ -1,7 +1,62 @@
 
 @import 'bourbon/bourbon';
 
+//Repo icon:
+    //<span class="mega-octicon octicon-repo"></span>
+//Branch icon:
+    //<span class="octicon octicon-git-branch"></span>
+//Star icon:
+    //<span class="octicon octicon-star"></span>
+//Fork icon:
+    //<span class="octicon octicon-repo-forked"></span>
+//Logo icon:
+    //<span class="octicon octicon-mark-github"></span>
 
+
+header {
+  background-color: #f3f3f3;
+  background-image: linear-gradient(#f9f9f9, #f3f3f3);
+  background-repeat: repeat-x;
+  text-shadow: 0 1px 0 #fff;
+  border-bottom: 1px solid #e5e5e5;
+  min-width: 1000px;
+  box-sizing: border-box;
+  display: block;
+  color: #333333;
+
+}
+
+.octicon-mark-github {
+//  float: left;
+  width: 24px;
+  height: 25px;
+  font-size: 25px
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.mega-octicon  {
+  float: left;
+  margin-left: -45px;
+  text-align: center;
+  width: 35px;
+  color: #bbb;
+}
+
+a.repolist-name {
+ color: #4183C4;  
+ font-size: 20px;
+ line-height: 32px;
+ margin-top: 0px;
+ margin-bottom: 0px;
+ white-space: nowrap;}
+
+a:hover {
+  text-decoration: underline;
+}
+/*
 body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -23,3 +78,4 @@ body {
     letter-spacing: -1px;
   }
 }
+*/
