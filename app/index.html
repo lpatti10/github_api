@@ -23,38 +23,108 @@
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
-  <body>
 
-<!--CLASS SNIPPETS...
+<body>
 
-<ul class="some-container"></ul>
- 
-<script type="text/template" id="item-template">
-    <li>
-        Beer Name: <%= name %> - Company: <%= company %>
-    </li>
-</script>
 
--->
 <div class="wrapper">
     <header>
-        <span class="octicon octicon-mark-github"></span>
+        <div class="container">
+            <a href="#"><span class="octicon octicon-mark-github"></span></a>
+            <div class="notifications"><span class="octicon octicon-primitive-dot"></span></div>
+            <div class="search"></div>
+            
+            <ul class="top-nav">
+                <li class="top-nav"><a href="#">Explore</a></li>
+                <li class="top-nav"><a href="#">Gist</a></li>
+                <li class="top-nav"><a href="#">Blog</a></li>
+                <li class="top-nav"><a href="#">Help</a></li>
+            </ul>
+
+           
+           
+           
+
+
+
+        </div><!--End container-->
     </header>
 
     <div class="container">
-        <div class="block">
-              
-                        <ul id="repoList">
-                        
+        <div id="sidebar">
+     
+            <script type="text/template" id="sidebar_template">
+                <img src="<%= avatar_url %>" alt="<%= name %>" id="avatar" />
+                <h1><%= name %></h1>
+                <h2><%= login %></h2>
+                <div class="contacts">
+                    <div class="location">
+                        <span class="octicon octicon-location"></span>
+                        <h4><%= location %></h4>
+                    </div>
+                    <div class="email">
+                        <span class="octicon octicon-mail"></span>
+                        <h4><%= email %></h4>
+                    </div>
+                    <div class="blog">
+                        <span class="octicon octicon-link"></span>
+                        <h4><%= blog %></h4>
+                    </div>
+                        <div class="created_at">
+                        <span class="octicon octicon-clock"></span>
+                        <h4><%= created_at %></h4>
+                    </div>
+                </div>
 
-                         
-                               
-                          
-                        </ul>  
+                <div class="stats">
+                    <div class="followers">
+                        <h3><%= followers %></h3>
+                        <h6>Followers</h6>
+                    </div>
+                    <div class="starred">
+                        <h3>10</h3>
+                        <h6>Starred</h6>
+                    </div>
+                    <div class="following">
+                        <h3><%= following %></h3>
+                        <h6>Following</h6>
+                    </div>
+                </div>
+            </script>
                 
-                </div><!-- END block -->
-            </div><!-- END container -->
+        </div><!-- End sidebar............................ -->
 
+
+        <div class="main_body">
+            
+        <!-- "Data" is not right in _.each below -->  
+           <ul id="main"></ul>
+            <script type="text/template" id="main_template">
+                    
+                        <li>
+                            <span class="mega-octicon octicon-repo"></span>
+                            <a class="repolist-name"><%= name %></a>
+                            <h4><%= description %></h4>
+                            <h6><%= updated_at %></h6>
+                            <h5><%= language %></h5>
+                            <h5><span class="octicon octicon-star"><%= stargazers_count %></h5>
+                            <h5><span class="octicon octicon-git-branch"><%= forks_count %></h5>
+                        </li> 
+            </script>
+            
+            
+
+
+        </div><!--End main -->
+    
+
+    </div><!-- END container -->
+
+    
+          
+    
+ 
+    
 </div><!-- END wrapper -->
 
 
@@ -68,8 +138,10 @@
 
 
 
+    <!--NO LONGER LINKING TO LOCAL DATA
     <script src="scripts/payload_acct.js"></script>
     <script src="scripts/payload_repo.js"></script>
+    -->
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -77,6 +149,8 @@
     <script src="../bower_components/underscore/underscore.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+
+        <script src="scripts/secret.js"></script>
 
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>

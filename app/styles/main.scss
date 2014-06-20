@@ -1,19 +1,20 @@
 
 @import 'bourbon/bourbon';
 
-//Repo icon:
-    //<span class="mega-octicon octicon-repo"></span>
-//Branch icon:
-    //<span class="octicon octicon-git-branch"></span>
-//Star icon:
-    //<span class="octicon octicon-star"></span>
-//Fork icon:
-    //<span class="octicon octicon-repo-forked"></span>
-//Logo icon:
-    //<span class="octicon octicon-mark-github"></span>
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #4183c4;
 
+body {
+  background: #ffffff;
+  font-family: $font-stack;
+  color: #333333;
+}
+ul li {
+  list-style-type: none;
+}
 
 header {
+  
   background-color: #f3f3f3;
   background-image: linear-gradient(#f9f9f9, #f3f3f3);
   background-repeat: repeat-x;
@@ -23,19 +24,106 @@ header {
   box-sizing: border-box;
   display: block;
   color: #333333;
-
 }
-
+.container {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
 .octicon-mark-github {
-//  float: left;
+  float: left;
   width: 24px;
   height: 25px;
-  font-size: 25px
+  font-size: 25px;
+  padding: 8px 10px 6px;
+  margin-left: -10px;
+  margin-right: 5px;
+  color: #000;
+}
+.octicon-mark-github:hover {
+  color: $primary-color;
+  text-decoration: none;
+}
+.notifications {
+  display: block;
+  float: left;
+  width: 42px;
+  height: 100%;
+  margin-right: 15px;
+  text-align: center;
+  line-height: 40px;
+  padding-left: 1px;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  box-shadow: inset 1px 0 0 rgba(255,255,255,0.15),1px 0 0 rgba(255,255,255,0.15);
+  text-decoration: none;
+}
+.octicon-primitive-dot {
+  width: 8px;
+  height: 8px;
+  color: #bbb;
+
+}
+.search {
+  display: block;
+  float: left;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border-color: #ddd;
+  background-color: #fcfcfc;
+  box-shadow: 0 1px 0 #fff;
+  width: 100%;
+  min-height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  vertical-align: middle;
+  width: 230px;
+  height:30px;
+}
+ul.top-nav {
+  width: 180px;
+  display: block;
+  float: left;  
+  list-style: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+li.top-nav  {
+  display: block;
+  float: left;
+  text-shadow: 0 1px 0 #fff;
+  padding: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-ul li {
-  list-style-type: none;
+#sidebar {
+  clear: both;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 25%;
+  color: #333333;
+  display: block;
+  margin-top: 30px;
 }
+
+img#avatar {
+  height: 230px;
+  width: 230px;
+  border-radius: 6px;
+}
+
+.main {
+  width: 75%;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px;
+}
+
+
 
 .mega-octicon  {
   float: left;
@@ -45,8 +133,16 @@ ul li {
   color: #bbb;
 }
 
+.octicon-location, .octicon-mail, .octicon-link, .octicon-clock {
+  float: left;
+  width: 16px;
+  text-align: center;
+  margin-left: -24px;
+  color: #ccc;
+}
+
 a.repolist-name {
- color: #4183C4;  
+ color: $primary-color;  
  font-size: 20px;
  line-height: 32px;
  margin-top: 0px;

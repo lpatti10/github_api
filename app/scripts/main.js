@@ -1,3 +1,4 @@
+	/*
 	// SUCCESSFUL INJECTION OF REPOS (in alpha order) (timestamps need conversions)
 		var repo, icon, name, descr, update, lang, star, fork = '';
 			ghRepos.results.forEach (function (a) {
@@ -12,13 +13,54 @@
 				repo += '</li>';
 				$('#repoList').append(repo);
 			});
+ */
 
-// Tim's example of _.each
-		var beer = ['lager', 'stout', 'amber', 'ipa', 'belgium'];
-		_.each(beer, function (a) {
-//		console.log(a);
-		});
- 
+// AJAX request to real-time ACCT data...
+// Checking for secret and client code or setting to an empty string
+	var cID = clientID || '';
+	var cSECRET = clientSecret || '';
+
+//Grabbing template string
+	var template = _.template( $('#sidebar_template').html() );
+
+
+
+// Function to run after request.
+// Takes our data, passes it through our template and then outputs the rendered HTML inside of our #sidebar element
+//		var buildPage = function (data) {
+//  		$('#sidebar').html( template(data)) ;
+//		});
+
+//		$.getJSON('https://api.github.com/users/lpatti10').done(buildPage);
+
+
+//Making request
+ 	$.getJSON("https://api.github.com/users/lpatti10", {client_id: cID, client_secret: cSECRET}, function (data){
+	  $('#sidebar').html( template(data));
+	});
+
+//Grabbing template string
+	var repoTemplate = _.template( $('#main_template').html() );
+
+// AJAX request to real-time REPO data...
+	$.getJSON("https://api.github.com/users/lpatti10/repos", {client_id: cID, client_secret: cSECRET}, function (repoArray){
+ 		//$('#main').html( repoTemplate(data/*[0]*/));
+ 		//Running _.each on the array
+ 		_.each( repoArray, function( a ){ 
+ 			$('#main').append( repoTemplate(a));
+ 		});
+ 	});
+		
+
+
+
+// var templateString = $('#item-template').text();
+// var renderTemplate = _.template(templateString);
+// _.each(dogfishhead.beers, function (beer) {
+//   $('.some-container').append(renderTemplate(beer));
+// });
+
+
 
 /*
 // ETSY SNIPPET ////////////////////////////////////////////////////////////////////////////
