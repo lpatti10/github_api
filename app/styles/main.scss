@@ -24,12 +24,14 @@ header {
   text-shadow: 0 1px 0 #fff;
   border-bottom: 1px solid #e5e5e5;
   min-width: 1000px;
+  height: 40px;
   box-sizing: border-box;
   display: block;
   color: #333333;
 }
 .container {
   width: 980px;
+  height: 40px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -84,7 +86,7 @@ header {
   height:30px;
 }
 ul.top-nav {
-  width: 180px;
+  width: 220px;
   display: block;
   float: left;  
   list-style: none;
@@ -116,6 +118,16 @@ img#avatar {
   height: 230px;
   width: 230px;
   border-radius: 6px;
+}
+
+
+img#avatarThumb {
+  height: 20px;
+  width: 20px;
+  margin: -2px 5px 0 0;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #fff;
+  display: inline-block;
 }
 
 .main_body {
@@ -196,7 +208,10 @@ h4 {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
+h5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 h6 {
   margin-top: 0px;
 }

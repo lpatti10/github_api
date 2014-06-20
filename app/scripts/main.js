@@ -20,9 +20,10 @@
 	var cID = clientID || '';
 	var cSECRET = clientSecret || '';
 
-//Grabbing template string
+//Grabbing template strings
 	var template = _.template( $('#sidebar_template').html() );
-
+	var headTemplate = _.template( $('#header_template').html() );
+	var repoTemplate = _.template( $('#main_template').html() );
 
 
 // Function to run after request.
@@ -36,11 +37,12 @@
 
 //Making request
  	$.getJSON("https://api.github.com/users/lpatti10", {client_id: cID, client_secret: cSECRET}, function (data){
+	  $('#header').html( headTemplate(data));
 	  $('#sidebar').html( template(data));
+
 	});
 
-//Grabbing template string
-	var repoTemplate = _.template( $('#main_template').html() );
+
 
 // AJAX request to real-time REPO data...
 	$.getJSON("https://api.github.com/users/lpatti10/repos", {client_id: cID, client_secret: cSECRET}, function (repoArray){
@@ -52,7 +54,7 @@
  	});
 		
 
-
+	
 
 // var templateString = $('#item-template').text();
 // var renderTemplate = _.template(templateString);
