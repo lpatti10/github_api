@@ -75,11 +75,11 @@
                     </div>
                     <div class="email">
                         <span class="octicon octicon-mail"></span>
-                        <h4><%= email %></h4>
+                        <h4><a href="#" class="email"><%= email %></a></h4>
                     </div>
                     <div class="blog">
                         <span class="octicon octicon-link"></span>
-                        <h4><%= blog %></h4>
+                        <h4><a href="#" class="blog"><%= blog %></a></h4>
                     </div>
                         <div class="created_at">
                         <span class="octicon octicon-clock"></span>
@@ -89,16 +89,16 @@
 
                 <div class="stats">
                     <div class="followers">
-                        <h3><%= followers %></h3>
-                        <h6>Followers</h6>
+                        <a href="#" class="followers"><h3><%= followers %></h3></a>
+                        <a href="#" class="followers"><h6>Followers</h6></a>
                     </div>
                     <div class="starred">
-                        <h3>10</h3>
-                        <h6>Starred</h6>
+                        <a href="#" class="starred"><h3>10</h3></a>
+                        <a href="#" class="starred"><h6>Starred</h6></a>
                     </div>
                     <div class="following">
-                        <h3><%= following %></h3>
-                        <h6>Following</h6>
+                        <a href="#" class="following"><h3><%= following %></h3></a>
+                        <a href="#" class="following"><h6>Following</h6></a>
                     </div>
                 </div>
             </script>
@@ -117,7 +117,7 @@
         <!-- "Data" is not right in _.each below -->  
            <ul id="main"></ul>
             <script type="text/template" id="main_template">
-                        <li>
+                        <li class="repo">
                             <div class="left">
                                 <span class="mega-octicon octicon-repo"></span>
                                 <a class="repolist-name"><%= name %></a>

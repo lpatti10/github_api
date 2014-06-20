@@ -4,9 +4,9 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #4183c4;
 
-* {
-  border: red 1px solid;
-}
+// //* {
+//   border: red 1px solid;
+// }
 body {
   background: #ffffff;
   font-family: $font-stack;
@@ -113,6 +113,27 @@ li.top-nav  {
   display: block;
   margin-top: 30px;
 }
+.stats {
+  margin-bottom: 10px;
+  margin-top: 25px;
+  text-align: center;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  height: 80px;
+}
+.followers, .starred, .following  {
+  width: 79px;
+  display: inline-block;
+  float: left;
+  color: black;
+  text-decoration: none;
+
+}
+
+a.followers:hover, a.starred:hover, a.following:hover { 
+  color: $primary-color;
+  text-decoration: none;
+}
 
 img#avatar {
   height: 230px;
@@ -139,7 +160,9 @@ img#avatarThumb {
   //background-color: black;
   //display: inline-block;
 }
-
+li.repo {
+   border-top: 1px solid #eee;
+}
 .right {
   float: right;
   //display: inline-block;
@@ -187,8 +210,13 @@ img#avatarThumb {
   float: left;
   width: 16px;
   text-align: center;
-  margin-left: -24px;
+  margin-right: 10px;
   color: #ccc;
+  font-size: 16px;
+}
+a.email, a.blog {
+  color: $primary-color;
+  text-decoration: none;
 }
 
 a.repolist-name {
@@ -202,18 +230,55 @@ a.repolist-name {
 a:hover {
   text-decoration: underline;
 }
+.octicon-star, .octicon-git-branch {
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+h1 {
+  margin-bottom: 0px;
+  margin-top: 5px;
+  line-height: 1;
+  font-size: 28px;
+}
+h2 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  color: #666;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 15px;
+}
 h4 {
   font-weight: normal;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 h5 {
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #666;
   margin-top: 5px;
   margin-bottom: 5px;
+  margin-right: 10px;
 }
+
 h6 {
+  font-size: 11px;
+  color: #999;
   margin-top: 0px;
+  font-weight: normal;
 }
 
 
