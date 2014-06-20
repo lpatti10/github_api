@@ -4,6 +4,9 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #4183c4;
 
+* {
+  border: red 1px solid;
+}
 body {
   background: #ffffff;
   font-family: $font-stack;
@@ -115,15 +118,50 @@ img#avatar {
   border-radius: 6px;
 }
 
-.main {
-  width: 75%;
-  float: left;
+.main_body {
+  width: 650px;
+  float: right;
   padding-left: 10px;
   padding-right: 10px;
   margin-top: 20px;
+  //background-color: black;
+  //display: inline-block;
 }
 
+.right {
+  float: right;
+  //display: inline-block;
+}
+.floatleft {
+  float: left;
+  //display: inline-block;
+}
+.left {
+  //float: left;
+  display: inline-block;
+}
 
+.tabnav {
+  width: 650px;
+  height: 50px;
+  //float: right;
+  //padding-left: 10px;
+  //padding-right: 10px;
+  //margin-top: 20px;
+  background-color: red;
+  //display: inline-block;
+}
+
+.filter-bar {
+  width: 650px;
+  height: 50px;
+  //float: right;
+  //padding-left: 10px;
+  //padding-right: 10px;
+  //margin-top: 20px;
+  background-color: blue;
+  //display: inline-block;
+}
 
 .mega-octicon  {
   float: left;
@@ -152,6 +190,18 @@ a.repolist-name {
 a:hover {
   text-decoration: underline;
 }
+h4 {
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h6 {
+  margin-top: 0px;
+}
+
+
 /*
 body {
   background: #fafafa;

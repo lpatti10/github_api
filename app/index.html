@@ -96,26 +96,35 @@
 
 
         <div class="main_body">
-            
+            <div class="tabnav">
+
+            </div><!--End tabnav-->
+
+            <div class="filter-bar">
+
+            </div><!--End filter-bar-->
         <!-- "Data" is not right in _.each below -->  
            <ul id="main"></ul>
             <script type="text/template" id="main_template">
-                    
                         <li>
-                            <span class="mega-octicon octicon-repo"></span>
-                            <a class="repolist-name"><%= name %></a>
-                            <h4><%= description %></h4>
-                            <h6><%= updated_at %></h6>
-                            <h5><%= language %></h5>
-                            <h5><span class="octicon octicon-star"><%= stargazers_count %></h5>
-                            <h5><span class="octicon octicon-git-branch"><%= forks_count %></h5>
+                            <div class="left">
+                                <span class="mega-octicon octicon-repo"></span>
+                                <a class="repolist-name"><%= name %></a>
+                                <h4><%= description %></h4>
+                                <h6><%= updated_at %></h6>
+                            </div>
+                            <div class="right">
+                                <h5 class="floatleft"><%= language %></h5>
+                                <h5 class="floatleft"><span class="octicon octicon-star"><%= stargazers_count %></h5>
+                                <h5 class="floatleft"><span class="octicon octicon-git-branch"><%= forks_count %></h5>
+                            </div>
                         </li> 
             </script>
             
-            
+           
 
 
-        </div><!--End main -->
+        </div><!--End main_body -->
     
 
     </div><!-- END container -->
