@@ -16,8 +16,7 @@ ul li {
   list-style-type: none;
 }
 
-header {
-  
+header { 
   background-color: #f3f3f3;
   background-image: linear-gradient(#f9f9f9, #f3f3f3);
   background-repeat: repeat-x;
@@ -165,21 +164,17 @@ a.top-nav.floatleft:hover {
   text-decoration: none;
 
 }
-
 a.followers:hover, 
 a.starred:hover, 
 a.following:hover { 
   color: $primary-color;
   text-decoration: none;
 }
-
 img#avatar {
   height: 230px;
   width: 230px;
   border-radius: 6px;
 }
-
-
 img#avatarThumb {
   height: 20px;
   width: 20px;
@@ -189,15 +184,46 @@ img#avatarThumb {
   display: inline-block;
   padding-top: 12px;
 }
-
 .main_body {
-  width: 650px;
+  width: 695px;
   float: right;
   padding-left: 10px;
   padding-right: 10px;
   margin-top: 20px;
-  //background-color: black;
-  //display: inline-block;
+}
+#tab1, #tab2, #tab3 {
+  width: 130px;
+  display: inline-block;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-left: 10px;
+}
+#tab1, #tab3 {
+  border-color: #ddd;
+  border-bottom: 1px solid #ddd;
+  border-radius: 3px 3px 0 0;
+  background-color: #fff;
+}
+#tab2 {
+  border-color: #ddd;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-radius: 3px 3px 0 0;
+  background-color: #fff;
+}
+#tab3 {
+  width: 395px;
+}
+.octicon-diff-added,
+.octicon-repo,
+.octicon-rss, {
+  margin-top: 14px;
+}
+p {
+  font-size: 14px;
+  color: #666;
+  padding-left: 10px;
 }
 li.repo {
    border-top: 1px solid #eee;
@@ -208,27 +234,21 @@ li.repo {
 }
 .floatleft {
   float: left;
-  //display: inline-block;
 }
 .left {
-  //float: left;
   display: inline-block;
 }
-
 .tabnav {
-  width: 650px;
+  width: 695px;
   height: 50px;
   margin-top: 11px;
-  background-color: red;
+  //background-color: red;
 }
-
 .filter-bar {
-  width: 650px;
+  width: 695px;
   height: 50px;
-  background-color: blue;
-  
+  //background-color: blue; 
 }
-
 .mega-octicon  {
   float: left;
   margin-left: -45px;
@@ -236,7 +256,6 @@ li.repo {
   width: 35px;
   color: #bbb;
 }
-
 .octicon-location, 
 .octicon-mail, 
 .octicon-link, 
@@ -252,7 +271,6 @@ a.email, a.blog {
   color: $primary-color;
   text-decoration: none;
 }
-
 a.repolist-name {
  color: $primary-color;  
  font-size: 20px;
@@ -262,7 +280,6 @@ a.repolist-name {
  margin-bottom: 0px;
  white-space: nowrap;
 }
-
 a:hover {
   text-decoration: underline;
 }
