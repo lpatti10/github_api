@@ -3,10 +3,17 @@
 
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #4183c4;
+$secondary-color: #333333;
+// $primary-button: 
+// $secondary-button: 
+
+
 
 // //* {
 //   border: red 1px solid;
 // }
+
+
 body {
   background: #ffffff;
   font-family: $font-stack;
@@ -15,7 +22,42 @@ body {
 ul li {
   list-style-type: none;
 }
-
+button.secondary {
+  float: right;
+  text-decoration: none;
+  background-image: linear-gradient(#fff, #eee);
+  background-repeat: repeat-x;
+  border-color: #ccc;
+  color: $secondary-color;
+  font-size: 13px;
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+  border-radius: 3px;
+  border: 1px solid #d5d5d5;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+button.secondary:hover {
+  text-decoration: none;
+  background-image: linear-gradient(#eee, #ddd);
+  background-color: #dddddd;
+  background-repeat: repeat-x; 
+}
+button.secondary.tertiary {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 6px;
+  margin-left: 6px;
+}
+.octicon-pencil {
+  margin-right: 10px;
+}
 header { 
   background-color: #f3f3f3;
   background-image: linear-gradient(#f9f9f9, #f3f3f3);
@@ -26,7 +68,7 @@ header {
   height: 40px;
   box-sizing: border-box;
   display: block;
-  color: #333333;
+  color: $secondary-color;
 }
 .container {
   width: 980px;
@@ -83,6 +125,11 @@ header {
   padding-bottom: 4px;
   padding-top: 4px;
 }
+.search.large {
+  height: 32px;
+  padding: 0px;
+  width: 230px;
+}
 ul.top-nav {
   width: 200px;
   display: block;
@@ -117,7 +164,6 @@ a.top-nav.floatleft {
   padding-right: 15px;
   margin-top: 0px;
 }
-
 a.top-nav:hover {
   color: $primary-color;
   text-decoration: none;
@@ -144,7 +190,7 @@ a.top-nav.floatleft:hover {
   padding-left: 10px;
   padding-right: 10px;
   width: 25%;
-  color: #333333;
+  color: $secondary-color;
   display: block;
   margin-top: 30px;
 }
@@ -162,7 +208,6 @@ a.top-nav.floatleft:hover {
   float: left;
   color: black;
   text-decoration: none;
-
 }
 a.followers:hover, 
 a.starred:hover, 
@@ -199,10 +244,8 @@ img#avatarThumb {
   padding-left: 10px;
 }
 #tab1, #tab3 {
-  border-color: #ddd;
-  border-bottom: 1px solid #ddd;
-  border-radius: 3px 3px 0 0;
   background-color: #fff;
+
 }
 #tab2 {
   border-color: #ddd;
@@ -211,6 +254,7 @@ img#avatarThumb {
   border-left: 1px solid #ddd;
   border-radius: 3px 3px 0 0;
   background-color: #fff;
+  margin-bottom: -7px;
 }
 #tab3 {
   width: 395px;
@@ -220,13 +264,41 @@ img#avatarThumb {
 .octicon-rss, {
   margin-top: 14px;
 }
-p {
+p, 
+.octicon-diff-added,
+.octicon-rss, {
   font-size: 14px;
   color: #666;
   padding-left: 10px;
 }
+p#tab2text {
+  color: #000;
+}
 li.repo {
    border-top: 1px solid #eee;
+}
+ul.tabsubnav {
+  padding-left: 0px;
+  margin-left: 10px;
+}
+li.tabsubnav {
+  margin-left: 10px;
+  display: inline-block;
+  float: left;
+  font-size: 14px;
+  color: #777;
+}
+a.tabsubnav {
+  text-decoration: none;
+  color: $primary-color;
+}
+a.tabsubnav:hover {
+  text-decoration: underline;
+}
+a.tabsubnav.default {
+  margin-left: 0px;
+  color: #000;
+  font-weight: bold;
 }
 .right {
   float: right;
@@ -241,7 +313,9 @@ li.repo {
 .tabnav {
   width: 695px;
   height: 50px;
-  margin-top: 11px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0px;
+  margin-top: 0px;
   //background-color: red;
 }
 .filter-bar {
@@ -314,7 +388,7 @@ h3 {
 }
 h4 {
   font-weight: normal;
-  font-size: 14px;
+  font-size: 13px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
