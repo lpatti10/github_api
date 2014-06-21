@@ -67,7 +67,6 @@ header {
   width: 8px;
   height: 8px;
   color: #bbb;
-
 }
 .search {
   display: block;
@@ -77,32 +76,69 @@ header {
   border-color: #ddd;
   background-color: #fcfcfc;
   box-shadow: 0 1px 0 #fff;
-  width: 100%;
-  min-height: 28px;
   border: 1px solid #ccc;
   border-radius: 3px;
   vertical-align: middle;
   width: 230px;
-  height:30px;
+  height: 18px;
+  padding-bottom: 4px;
+  padding-top: 4px;
 }
 ul.top-nav {
-  width: 220px;
+  width: 200px;
   display: block;
   float: left;  
   list-style: none;
   margin-top: 0px;
   margin-bottom: 0px;
+  padding-left: 15px;
 }
 li.top-nav  {
   display: block;
   float: left;
   text-shadow: 0 1px 0 #fff;
-  padding: 5px;
+  padding-top: 13px;
+  padding-right: 15px;
   font-size: 13px;
   font-weight: bold;
   text-decoration: none;
+} 
+ a.top-nav {
+  color: black;
+  margin-top: 8px;
+  text-decoration: none;
+}
+a.top-nav.floatleft {
+  color: black;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #fff;
+  padding-top: 13px;
+  padding-right: 15px;
+  margin-top: 0px;
 }
 
+a.top-nav:hover {
+  color: $primary-color;
+  text-decoration: none;
+} 
+a.top-nav.floatleft:hover {
+  color: $primary-color;
+  text-decoration: none;
+} 
+.octicon-plus,
+.octicon-triangle-down,
+.octicon-tools,
+.octicon-sign-out {
+  padding-top: 13px;
+  padding-left: 10px;
+}
+.octicon-triangle-down {
+  padding-top: 15px;
+  padding-left: 2px;
+  font-size: 10px;
+}
 #sidebar {
   clear: both;
   float: left;
@@ -130,7 +166,9 @@ li.top-nav  {
 
 }
 
-a.followers:hover, a.starred:hover, a.following:hover { 
+a.followers:hover, 
+a.starred:hover, 
+a.following:hover { 
   color: $primary-color;
   text-decoration: none;
 }
@@ -149,6 +187,7 @@ img#avatarThumb {
   border-radius: 3px;
   box-shadow: 0 1px 0 #fff;
   display: inline-block;
+  padding-top: 12px;
 }
 
 .main_body {
@@ -179,23 +218,15 @@ li.repo {
 .tabnav {
   width: 650px;
   height: 50px;
-  //float: right;
-  //padding-left: 10px;
-  //padding-right: 10px;
-  //margin-top: 20px;
+  margin-top: 11px;
   background-color: red;
-  //display: inline-block;
 }
 
 .filter-bar {
   width: 650px;
   height: 50px;
-  //float: right;
-  //padding-left: 10px;
-  //padding-right: 10px;
-  //margin-top: 20px;
   background-color: blue;
-  //display: inline-block;
+  
 }
 
 .mega-octicon  {
@@ -206,7 +237,10 @@ li.repo {
   color: #bbb;
 }
 
-.octicon-location, .octicon-mail, .octicon-link, .octicon-clock {
+.octicon-location, 
+.octicon-mail, 
+.octicon-link, 
+.octicon-clock {
   float: left;
   width: 16px;
   text-align: center;
@@ -222,15 +256,18 @@ a.email, a.blog {
 a.repolist-name {
  color: $primary-color;  
  font-size: 20px;
+ font-weight: bold;
  line-height: 32px;
  margin-top: 0px;
  margin-bottom: 0px;
- white-space: nowrap;}
+ white-space: nowrap;
+}
 
 a:hover {
   text-decoration: underline;
 }
-.octicon-star, .octicon-git-branch {
+.octicon-star, 
+.octicon-git-branch {
   font-size: 13px;
   font-weight: bold;
   margin-right: 10px;
@@ -282,26 +319,3 @@ h6 {
 }
 
 
-/*
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
-}
-
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-}
-*/
