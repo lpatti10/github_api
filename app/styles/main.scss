@@ -334,5 +334,52 @@ h6 {
   margin-top: 0px;
   font-weight: normal;
 }
-
-
+footer {
+  position: relative;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #777;
+  border-top: 1px solid #eee;
+  clear: both;
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+ul.foot {
+  padding-left: 0px;
+}
+li.foot {
+  margin-left: 10px;
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  color: #777;
+}
+li.foot.static {
+  margin-left: 0px;
+}
+a.foot {
+  text-decoration: none;
+  color: $primary-color;
+}
+a.foot:hover {
+  text-decoration: underline;
+}
+.octicon-mark-github.foot {
+  position: absolute;
+  top: 38px;
+  left: 50%;
+  height: 24px;
+  width: 24px;
+  margin-left: -12px;
+  font-size: 24px;
+  color: #ccc;
+  display: inline-block;
+  text-decoration: none;
+}
+.octicon-mark-github.foot:hover {
+  color: #aaa;
+}
