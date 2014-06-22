@@ -22,6 +22,39 @@ body {
 ul li {
   list-style-type: none;
 }
+button.primary {
+  float: right;
+  text-decoration: none;
+  background-image: linear-gradient(#8add6d, #60b044);
+  background-repeat: repeat-x;
+  border-color: #5ca941;
+  background-color: #60b044;
+  color: #fff;
+  font-size: 13px;
+  font-weight: normal;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+  border-radius: 3px;
+  border: 1px solid #5ca941;
+  margin-top: 10px;
+  margin-left: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.octicon-repo.primary {
+  color: #fff;
+  padding-top:0px;
+  margin-top: 0px;
+  margin-right: 6px;
+}
+button.primary:hover {
+  text-decoration: none;
+  background-image: linear-gradient(#79d858, #569e3d);
+  background-repeat: repeat-x;
+  border-color: #4a993e;
+  background-color: #569e3d;
+}
 button.secondary {
   float: right;
   text-decoration: none;
@@ -264,7 +297,7 @@ img#avatarThumb {
 .octicon-rss, {
   margin-top: 14px;
 }
-p, 
+p,
 .octicon-diff-added,
 .octicon-rss, {
   font-size: 14px;
